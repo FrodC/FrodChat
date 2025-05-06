@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>FrodChat</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login">
+            <h1>FrodChat</h1>
+            <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+            <input type="text" id="room" placeholder="Oda Adı" required>
+            <input type="password" id="pwd" placeholder="Şifre (opsiyonel)">
+            <button id="joinBtn">Katıl</button>
+            <div id="error" class="error-message"></div>
+        </div>
+
+        <div id="chat" hidden>
+            <header>
+                <h2>Oda: <span id="currentRoom"></span></h2>
+                <div id="groupList" class="room-list"></div>
+            </header>
+
+            <div id="messages" class="message-container"></div>
+
+            <div class="input-area">
+                <input type="text" id="messageInput" placeholder="Mesajınız...">
+                <button id="sendBtn">Gönder</button>
+                <button id="helpBtn">Yardım</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.min.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+</html>
